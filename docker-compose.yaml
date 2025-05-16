@@ -1,0 +1,12 @@
+services:
+  acme-sh:
+    image: docker.io/neilpang/acme.sh:latest
+    container_name: acme.sh
+    restart: always
+    command: daemon
+    stdin_open: true
+    tty: true
+    env_file:
+      - ./.env
+    volumes:
+      - ./volumes/acme.sh:/acme.sh
