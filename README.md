@@ -11,22 +11,16 @@ Easily issue TLS certificates with [`acme.sh`](https://github.com/acmesh-officia
    CF_Token="YOUR_TOKEN"
    ```
 
-2. Create output directory `volumes/acme.sh`:
-
-   ```sh
-   mkdir -p volumes/acme.sh
-   ```
-
 3. Start acme.sh container:
 
    ```sh
    docker-compose up -d
    ```
 
-4. Register ZeroSSL account:
+4. (Optional) Change CA:
 
    ```sh
-   docker exec acme.sh --register-account -m '<YOUR_EMAIL>'
+   docker exec acme.sh --set-default-ca --server letsencrypt
    ```
 
 5. Issue certificates:
