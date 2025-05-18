@@ -17,7 +17,7 @@ Easily issue TLS certificates with [`acme.sh`](https://github.com/acmesh-officia
    docker-compose up -d
    ```
 
-4. (Optional) Change CA:
+4. (Optional) Change default CA:
 
    ```sh
    docker exec acme.sh --set-default-ca --server letsencrypt
@@ -26,10 +26,10 @@ Easily issue TLS certificates with [`acme.sh`](https://github.com/acmesh-officia
 5. Issue certificates:
 
    ```sh
-   docker exec acme.sh --issue --dns dns_cf -d '<YOUR_DOMAIN_NAME_1>' -d '<YOUR_DOMAIN_NAME_2>'
+   docker exec acme.sh --issue --dns dns_cf -d 'YOUR_DOMAIN_NAME_1' -d 'YOUR_DOMAIN_NAME_2'
    ```
 
-   Issued certificates will be saved to `./volumes/acme.sh`
+   Certificates will be saved to `./volumes/acme.sh`
 
 ## License
 
