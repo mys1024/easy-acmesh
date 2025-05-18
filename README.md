@@ -29,7 +29,7 @@ Easily issue TLS certificates with [`acme.sh`](https://github.com/acmesh-officia
    docker exec acme.sh --issue --dns dns_cf -d '<YOUR_DOMAIN_NAME_1>' -d '<YOUR_DOMAIN_NAME_2>'
    ```
 
-   Issued certificates will be saved to `volumes/acme.sh/<YOUR_DOMAIN_NAME>_ecc`
+   Issued certificates will be saved to `./volumes/acme.sh`
 
 ## License
 
